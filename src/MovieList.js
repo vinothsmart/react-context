@@ -22,7 +22,12 @@ const MovieList = () => {
   return (
     <div>
       {movieList.map((movie) => (
-        <Movie name={movie.name} />
+        <Movie
+          name={movie.name}
+          price={movie.price}
+          id={movie.id}
+          key={movie.id}
+        />
       ))}
     </div>
   );
