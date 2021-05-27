@@ -1,5 +1,4 @@
-const Movie = (props) => {
-  const { name } = props;
+const Movie = ({ name }) => {
   return (
     <div>
       <h1>{name}</h1>
