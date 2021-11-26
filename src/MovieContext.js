@@ -1,11 +1,8 @@
-import { render } from "@testing-library/react";
-import React, { createContext } from "react";
-import MovieList from "./MovieList";
-import Nav from "./Nav";
+import React, { createContext, useState } from "react";
+import { render } from "react-dom";
+export const MovieContext = createContext();
 
-const MovieContext = createContext();
-
-const MovieProvider = () => {
+export const MovieProvider = (props) => {
   const [movieList, setMovieList] = useState([
     {
       name: "Petta",
@@ -23,10 +20,5 @@ const MovieProvider = () => {
       id: "003",
     },
   ]);
-  render(
-    <MovieContext.Provider>
-      <Nav />
-      <MovieList />
-    </MovieContext.Provider>
-  );
+  render(<MovieContext.Provider>{props.children}</MovieContext.Provider>);
 };
