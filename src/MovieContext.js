@@ -1,5 +1,4 @@
 import React, { createContext, useState } from "react";
-import { render } from "react-dom";
 export const MovieContext = createContext();
 
 export const MovieProvider = (props) => {
@@ -15,10 +14,14 @@ export const MovieProvider = (props) => {
       id: "002",
     },
     {
-      name: "Karanan",
+      name: "Karnan",
       price: "120rs",
       id: "003",
     },
   ]);
-  render(<MovieContext.Provider>{props.children}</MovieContext.Provider>);
+  return (
+    <MovieContext.Provider value="vinoth">
+      {props.children}
+    </MovieContext.Provider>
+  );
 };
