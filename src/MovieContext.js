@@ -20,7 +20,7 @@ export const MovieProvider = (props) => {
     },
   ]);
   return (
-    <MovieContext.Provider value="vinoth">
+    <MovieContext.Provider value={[movieList, setMovieList]}>
       {props.children}
     </MovieContext.Provider>
   );
