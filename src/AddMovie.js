@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { MovieContext } from "./MovieContext";
 
 function AddMovie() {
-  const [moviesList, setMovieList] = useContext(MovieContext);
+  const [movieList, setMovieList] = useContext(MovieContext);
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
 

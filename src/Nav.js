@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { MovieContext } from "./MovieContext";
 
 const Nav = () => {
-  const [movieList, setMovieList] = useContext(MovieContext);
+  const [movieList] = useContext(MovieContext);
   return (
     <nav>
       <h2>Vinoth</h2>
